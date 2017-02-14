@@ -1,6 +1,6 @@
 # aws-ssh-stepstone
 
-This cloudformation script creates a SSH stepstone/bastion host in aws for secure access to your vpc. It is based upon: <https://cloudonaut.io/manage-aws-ec2-ssh-access-with-iam/>. Read it, it explains the concept.
+This cloudformation script creates a SSH stepstone/bastion host in aws for secure access to your vpc. It is based upon: <https://cloudonaut.io/manage-aws-ec2-ssh-access-with-iam/> / <https://github.com/widdix/aws-ec2-ssh>. Read it, it explains the concept.
 
 
 ## (Extra) Features:

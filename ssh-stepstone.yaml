@@ -160,9 +160,6 @@ Resources:
                 path=Resources.Instance.Metadata.AWS::CloudFormation::Init
                 action=/opt/aws/bin/cfn-init --verbose --stack=${AWS::StackName}  --region=${AWS::Region}  --resource=Instance
                 runas=root
-          packages:
-            yum:
-              yum-cron-daily: []
           commands:
             a_configure_sshd_command:
               command: "sed -i 's:#AuthorizedKeysCommand none:AuthorizedKeysCommand /opt/authorized_keys_command.sh:g' /etc/ssh/sshd_config"
@@ -176,6 +173,10 @@ Resources:
               command: "sed -i 's/#ClientAliveCountMax 3/ClientAliveCountMax 5/g' /etc/ssh/sshd_config"
             f_update_packages:
               command: "yum update -y"
+            g_update_packages:
+              command: "yum install yum-cron-daily -y"
+            h_update_packages:
+              command: "sed -i 's/apply_updates = no/apply_updates = yes/g' /etc/yum/yum-cron.conf"
             z_import_users:
               command: './import_users.sh'
               cwd: '/opt'

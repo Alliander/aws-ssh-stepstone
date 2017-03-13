@@ -179,6 +179,8 @@ Resources:
               command: "sed -i 's/apply_updates = no/apply_updates = yes/g' /etc/yum/yum-cron.conf"
             i_enable_yum_cron:
               command: "chkconfig yum-cron on"
+            j_start_yum_cron:
+              command: "service yum-cron start"
             z_import_users:
               command: './import_users.sh'
               cwd: '/opt'

@@ -24,6 +24,8 @@ Parameter | Description | Default
 `Subnet` | Specify the subnet in which the stepstone will be placed | none
 `VPC` | Specify the vpc of the previous selected subnet | none
 
+Ensure the subnet the stepstone is placed in has `Auto-assign Public IP: yes`. Otherwise the vm is not able to update and the cfn hup will not be send resulting in a broken deployment.
+
 ## Usage
 
 First create users and upload their ssh keys. If they require root on the stepstone, which will be not likely if only used for forwarding and tunneling, add them to the {StackName}-StepstoneRoot group in IAM.

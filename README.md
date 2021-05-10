@@ -18,7 +18,7 @@ The following parameters can be defined:
 
 Parameter | Description | Default
 --------- | ----------- | -------
-`AmiId` | Id of the AMI latest aws linux ami in your region. See https://aws.amazon.com/amazon-linux-ami/ | none
+`AmiId` | Latest ami EU Frankfurt: ami-0233214e13e500f77, Id of the AMI latest aws linux ami in your region. See (below page!!) https://aws.amazon.com/amazon-linux-ami/ | none
 `CidrWhitelist` | CIDR block for whitelisting incomming traffic. If more needed add them manually to the security group | 0.0.0.0/0
 `SshPort` | SSH listening port | 443
 `Subnet` | Specify the subnet in which the stepstone will be placed | none
